@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <p class="title">タイピングゲーム</p>
+        <div class="selectPanels">
+          <div class="selectPanel" id="words">
+            <p>Words Mode</p>
+            <form id="wordMode_">
+              <label>
+                <input type="radio" name="wordMode" value="0" />
+                Easy
+              </label>
+              <label>
+                <input type="radio" name="wordMode" value="1" checked />
+                Normal
+              </label>
+              <label>
+                <input type="radio" name="wordMode" value="2" />
+                Hard
+              </label>
+            </form>
+          </div>
+          <div class="selectPanel" id="nums">
+            <p>Numbers Mode</p>
+            <form id="numMode_">
+              <label>
+                <input type="radio" name="numMode" value="0" />
+                Easy
+              </label>
+              <label>
+                <input type="radio" name="numMode" value="1" checked />
+                Normal
+              </label>
+              <label>
+                <input type="radio" name="numMode" value="2" />
+                Hard
+              </label>
+              <label>
+                <input type="radio" name="numMode" value="3" />
+                veryHard
+              </label>
+            </form>
+          </div>
+        </div>
+        <div id="startButton">START!</div>
+        <div id="rule">遊び方</div>
+        <div id="ruleArea">
+          <h2>数字の降ってくるタイミングに合わせて入力！</h2>
+          <p>
+            定期的に画面に数字が降ってきます。<br />
+            特定のタイミングでその数字をキーボードで入力しなければ即ゲームオーバー！<br />
+          </p>
+
+          <h2>お題の言葉をタイピング！</h2>
+          <p>
+            画面に出題される言葉をタイピングする必要があります。<br />
+            5回、正しくタイピングするとクリアです。
+          </p>
+
+          <h2>自由に難易度変更！</h2>
+          <p>
+            タイトル画面で、降ってくる数字の数とお題の難易度を調節できます。
+          </p>
+          <div id="close">閉じる</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="indexScript.js"></script>
+</html>
