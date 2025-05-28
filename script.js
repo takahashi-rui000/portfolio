@@ -1,6 +1,6 @@
 sliderData = [
     {
-        sliderId: 'slider_rpg',
+        sliderId: "slider_rpg",
         slides:[
             {img: "images/rpg/title.png", desc: "タイトル画面です。セーブデータファイルがあれば、続きから始めることができます。"},
             {img: "images/rpg/new.png", desc: "はじめから始める際の画面です。文字列の入力を受け付けています。"},
@@ -18,6 +18,12 @@ sliderData = [
             {img: "images/rpg/command.png", desc: "デバッグ用にコマンドを使用できるようにしました。マップの切り替えやステータスの増強、ゴールドの追加などを行えます。"},
             {img: "images/rpg/bj.png", desc: "ブラックジャックを遊べるようにしました。ゲーム内のゴールドを賭けて遊ぶことができます。"},
             {img: "images/rpg/bj_win.png", desc: "ブラックジャックの勝利画面です。"},
+        ]
+    },
+    {
+        sliderId: "slider_js",
+        slides:[
+            {img:"", desc:""},
         ]
     }
 ]

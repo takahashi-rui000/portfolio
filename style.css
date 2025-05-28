@@ -33,6 +33,9 @@ section {
 h2 {
   color: #4a90e2;
 }
+h3 {
+  color: #4a90e2;
+}
 .screenshot {
   width: 100%;
   max-width: 600px;
@@ -105,10 +108,10 @@ footer {
 }
 
 .slider .prev {
-  left: 40%;
+  right: 60%;
 }
 .slider .next {
-  right: 40%;
+  left: 60%;
 }
 
 .slider .slider-controls {
