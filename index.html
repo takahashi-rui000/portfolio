@@ -33,10 +33,16 @@
     </section>
     <section id="swing">
         <h2>RPG風ゲーム（Java Swing）</h2>
-        <p>JavaのSwingを使って作成した、RPG風のゲームです。</p>
-        <p>専門学校一年目の最後に取り組んだ課題で、Swingの知識が全くない状態から独学で学びながら開発を進めました。</p>
+        <p>JavaのSwingを使って作成した、GUIのRPG風ゲームです。</p>
+        <p>専門学校一年目の最後に取り組んだ課題で、Swingの知識が全くない状態から一人で、独学で学びながら開発を進めました。</p>
         <p>手探りで始めた開発だったこともあり、設計面での課題は残りましたが、GUI開発やイベント処理基礎を実践的に習得するいい経験となりました。</p>
-        <p>矢印キー、ESCキー、Enterキーで操作可能にしました。</p>
+        <h3>概要</h3>
+        <p>ターン制のRPG風ゲームです。</p>
+        <p>フィールドは二次元配列で管理され、プレイヤーの移動先の数値に対応した処理が行われます。処理は町、カジノ、敵とのエンカウント、ボスがあります。</p>
+        <p>敵との戦闘中は攻撃と回復、逃げるという行動が可能で、攻撃をする・される際にちょっとしたミニゲームが行われ、攻撃の威力が増減します。</p>
+        <p>敵との戦闘に勝利すると経験値・ゴールドを取得できます。</p>
+        <p>町では装備や回復アイテムを買うことができます。</p>
+        <p></p>
         <p><strong>使用技術：</strong>Java, Swing, Jackson</p>
         <div id="slider_rpg" class="slider"></div>
         <!-- <p><strong>GitHub：</strong><a href="https://github.com/yourname/rpg-swing" target="_blank">rpg-swing</a></p> -->
@@ -44,7 +50,13 @@
     
     <section id="typing">
         <h2>タイピングゲーム（JavaScript）</h2>
-        <p>JavaScriptで作成したブラウザ上で動くタイピングゲームです。</p>
+        <p>JavaScriptで作成したブラウザ上で動作するタイピングゲームです。</p>
+        <p>発案から開発まで一人で行いました。</p>
+        <p>よくあるタイピングゲームに、独自の要素を加えて制作しました。</p>
+        <h3>概要</h3>
+        <p>基本的なタイピングゲームの要素に加えて、落ちてくる数字をタイミングよく入力する必要のあるゲームです。</p>
+        <p>タイトルページから難易度の調整と遊び方の閲覧をできます。</p>
+        <p>入力フィールドを使用せず、イベントリスナーから入力キーを取得し、日本語に変換する独自ロジックをJavaScriptで実装しました。</p>
         <p><strong>使用技術：</strong>HTML, CSS, JavaScript</p>
         <p><strong>公開URL：</strong><a href="https://takahashi-rui000.github.io/portfolio/js_game/index.html" target="_blank">タイピングゲーム</a></p>
         <div id="slider_js" class="slider"></div>
