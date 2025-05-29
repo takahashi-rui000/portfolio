@@ -15,7 +15,7 @@
     <nav>
         <a href="#swing">RPG風ゲーム</a>
         <a href="#typing">タイピングゲーム</a>
-        <!-- <a href="#jsp">ユーザー管理システム</a> -->
+        <a href="#jsp">ユーザー管理システム</a>
     </nav>
     
     <section>
@@ -29,47 +29,58 @@
         <p>Java / JSP・Servlet / HTML / CSS / JavaScript / SQL</p>
         <h3>【学習中の技術】</h3>
         <p>Python / Unity（C#） / TypeScript / Git / PHP</p>
-        <p>特にJava関連の技術に対して自信を持っています。</p>
+        <p>特にJava関連の技術に対して自信があり、学校の課題や個人製作を通じて継続的にスキルを磨いてまいりました。</p>
     </section>
     <section id="swing">
         <h2>RPG風ゲーム（Java Swing）</h2>
         <p>JavaのSwingを使って作成した、GUIのRPG風ゲームです。</p>
         <p>専門学校一年目の最後に取り組んだ課題で、Swingの知識が全くない状態から一人で、独学で学びながら開発を進めました。</p>
         <p>手探りで始めた開発だったこともあり、設計面での課題は残りましたが、GUI開発やイベント処理基礎を実践的に習得するいい経験となりました。</p>
-        <h3>概要</h3>
-        <p>ターン制のRPG風ゲームです。</p>
-        <p>フィールドは二次元配列で管理され、プレイヤーの移動先の数値に対応した処理が行われます。処理は町、カジノ、敵とのエンカウント、ボスがあります。</p>
-        <p>敵との戦闘中は攻撃と回復、逃げるという行動が可能で、攻撃をする・される際にちょっとしたミニゲームが行われ、攻撃の威力が増減します。</p>
+        <br>
+        <p>このゲームはターン制のRPG風ゲームです。</p>
+        <p>フィールドは二次元配列で管理されており、プレイヤーの移動先の数値に応じて町、カジノ、敵とのエンカウント、ボス戦などの処理が行われます。</p>
+        <p>敵との戦闘中は攻撃と回復、逃げるという行動が可能で、攻撃時にミニゲームが発生し、攻撃の威力が増減します。</p>
         <p>敵との戦闘に勝利すると経験値・ゴールドを取得できます。</p>
         <p>町では装備や回復アイテムを買うことができます。</p>
-        <p></p>
+        <p>jsonファイルへの書き出しによってセーブ機能を実現しました。</p>
+        <br>
         <p><strong>使用技術：</strong>Java, Swing, Jackson</p>
+        <p><strong>Git Hub：</strong><a href="https://github.com/takahashi-rui000/portfolio/tree/main/swingRpg" target="_blank">Gitへ</a></p>
         <div id="slider_rpg" class="slider"></div>
-        <!-- <p><strong>GitHub：</strong><a href="https://github.com/yourname/rpg-swing" target="_blank">rpg-swing</a></p> -->
     </section>
     
     <section id="typing">
         <h2>タイピングゲーム（JavaScript）</h2>
         <p>JavaScriptで作成したブラウザ上で動作するタイピングゲームです。</p>
         <p>発案から開発まで一人で行いました。</p>
-        <p>よくあるタイピングゲームに、独自の要素を加えて制作しました。</p>
-        <h3>概要</h3>
         <p>基本的なタイピングゲームの要素に加えて、落ちてくる数字をタイミングよく入力する必要のあるゲームです。</p>
         <p>タイトルページから難易度の調整と遊び方の閲覧をできます。</p>
-        <p>入力フィールドを使用せず、イベントリスナーから入力キーを取得し、日本語に変換する独自ロジックをJavaScriptで実装しました。</p>
+        <p>通常の入力フォームを使用せず、イベントリスナーからキー入力を取得し、日本語に変換する独自ロジックをJavaScriptで実装しました。</p>
+        <br>
         <p><strong>使用技術：</strong>HTML, CSS, JavaScript</p>
         <p><strong>公開URL：</strong><a href="https://takahashi-rui000.github.io/portfolio/js_game/index.html" target="_blank">タイピングゲーム</a></p>
         <div id="slider_js" class="slider"></div>
     </section>
   
     <section id="jsp">
-        <!-- <h2>ユーザー管理システム（JSP/Servlet）</h2>
-        <p>専門学校の課題として作成した、ログイン・登録・削除などが可能なWebアプリケーションです。</p>
-        <p><strong>使用技術：</strong>Java (JSP/Servlet), MySQL, HTML</p>
-        <p><strong>GitHub：</strong><a href="https://github.com/yourname/user-management" target="_blank">user-management</a></p>
-        <img class="screenshot" src="images/user-management.png" alt="ユーザー管理システムのスクリーンショット"> -->
+        <h2>ユーザー管理システム（JSP/Servlet）</h2>
+        <p>専門学校の課題として作成した、基本的なユーザー管理機能を備えたWebアプリケーションです。</p>
+        <p>ユーザー登録、ログイン認証、プロフィール編集、ユーザー情報の削除が可能です。</p>
+        <p>バックエンドはJSP/Servletを用い、MariaDBをデータベースとして利用しています。</p>
+        <p>セッション管理によるログイン状態の維持や、DAOを用いたデータベース操作の分離を実装しています。</p>
+        <p>また、重複している処理を一つのJSPファイルにまとめることで、コードの再利用性を高め、保守性の向上に努めました。</p>
+        <p>この課題を通じて、Webアプリケーションの基礎的な仕組みや、バックエンドとデータベース連携の経験を得ました。</p>
+        <br>
+        <p><strong>使用技術：</strong>Java (JSP/Servlet), MariaDB, HTML</p>
+        <p><strong>Git Hub：</strong><a href="https://github.com/takahashi-rui000/portfolio/tree/main/JSP-Servlet" target="_blank">Gitへ</a></p>
+        <div id="slider_user" class="slider"></div>
     </section>
-    
+    <section>
+        <h2>おわりに</h2>
+        <p>最後までご覧いただき、誠にありがとうございました。</p>
+        <p>今後も学びを深めながら、より良いものづくりができるよう努力してまいります。</p>
+        <p>どうぞよろしくお願いいたします。</p>
+    </section>
     <footer>
     </footer>
     <script src="script.js"></script>

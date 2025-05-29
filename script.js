@@ -6,7 +6,7 @@ sliderData = [
             {img: "images/rpg/new.png", desc: "はじめから始める際の画面です。文字列の入力を受け付けています。"},
             {img: "images/rpg/name.png", desc: "入力規則があり、一定の条件を満たす必要があります。"},
             {img: "images/rpg/field.png", desc: "基本的なフィールド画面です。町、カジノ、ボス、障害物、道にそれぞれの処理があり、障害物は進めず、道を歩けば敵と確率でエンカウントします。"},
-            {img: "images/rpg/battle.png", desc: "敵とのバトル画面です。"},
+            {img: "images/rpg/battle.png", desc: "敵とのバトル画面です。攻撃・回復・逃亡を選択できます。"},
             {img: "images/rpg/selectEnemy.png", desc: "敵を選択する画面です。すでに倒れている敵は赤く表示されます。"},
             {img: "images/rpg/atack.png", desc: "敵を攻撃する画面です。赤いバーが左端から右に移動します。Enterキーを押したときのバーの位置によって攻撃の威力が増減します。これは相手の攻撃の際にも表示されます。"},
             {img: "images/rpg/slay.png", desc: "敵に勝利した時の画面です。経験値とゴールドがもらえる他、レベルアップ判定を行います。レベルアップをするとステータスが向上するほか、ステータスポイントが付与されます。"},
@@ -23,13 +23,32 @@ sliderData = [
     {
         sliderId: "slider_js",
         slides:[
-            {img:"", desc:"遊び方を確認できます"},
-            {img:"", desc:"タイトルページです。難易度の調整、遊び方の確認、ゲーム開始ができます。"},
-            {img:"", desc:"ゲームページです。制限時間、クリアまでの回数、タイピングのお題が表示されます。"},
-            {img:"", desc:"文字入力が可能で、お題と同じ言葉をタイプすることでクリアまでの回数を重ねられます。"},
-            {img:"", desc:"数字が降ってきます。pushのタイミングで対応した数字を押すことで成功となります。"},
-            {img:"", desc:"数字を逃してしまった場合、ゲームオーバーとなります。タイトルページへ戻ることが可能です。"},
-            {img:"", desc:"目標回数を達成するとクリアになります。"}
+            {img:"images/javascript/rule.png", desc:"遊び方を確認することができます。"},
+            {img:"images/javascript/title.png", desc:"タイトルページです。難易度の調整、遊び方の確認、ゲーム開始ができます。"},
+            {img:"images/javascript/game.png", desc:"ゲームページです。制限時間、クリアまでの回数、タイピングのお題が表示されます。"},
+            {img:"images/javascript/input.png", desc:"文字入力が可能で、お題と同じ言葉をタイプすることでクリアまでの回数を重ねられます。"},
+            {img:"images/javascript/number.png", desc:"数字が降ってきます。pushのタイミングで対応した数字を押すことで成功となります。"},
+            {img:"images/javascript/gameover.png", desc:"数字を逃してしまった場合、ゲームオーバーとなります。タイトルページへ戻ることが可能です。"},
+            {img:"images/javascript/gameclear.png", desc:"目標回数を達成するとクリアになります。"}
+        ]
+    },
+    {
+        sliderId: "slider_user",
+        slides:[
+            {img:"images/jsp-servlet/login.png", desc:"ログインページです。ログイン情報のない状態で各種ページにアクセスした際はログインページへ自動で遷移されます。"},
+            {img:"images/jsp-servlet/index.png", desc:"トップページです。各種ページへ飛ぶ事ができます。"},
+            {img:"images/jsp-servlet/add.png", desc:"新規作成ページです。各欄にrequited属性があり、入力が求められます。入力規則に反した内容の場合、エラーが表示されます。"},
+            {img:"images/jsp-servlet/create.png", desc:"正規な入力がされた場合、データベースへデータが登録されます。"},
+            {img:"images/jsp-servlet/listAll.png", desc:"一覧表示ページです。ログインIDをクリックするとユーザー編集ページへ遷移され、削除ボタンをクリックすると削除ページへ遷移されます。"},
+            {img:"images/jsp-servlet/edit.png", desc:"ユーザーの情報を編集できます。"},
+            {img:"images/jsp-servlet/update.png", desc:"正規な入力がされた場合、データベースのデータが更新されます。"},
+            {img:"images/jsp-servlet/confirm.png", desc:"削除確認画面です。削除ボタンを押すと確定されます。"},
+            {img:"images/jsp-servlet/delete.png", desc:"削除が実行され、データがデータベースから削除されます。"},
+            {img:"images/jsp-servlet/search.png", desc:"検索ページです。送信ボタンを押すと検索結果を表示できます。"},
+            {img:"images/jsp-servlet/search_all.png", desc:"空文字のまま送信されると全件表示されます。"},
+            {img:"images/jsp-servlet/search_word.png", desc:"文字が送信されると部分検索の結果が表示されます。"},
+            {img:"images/jsp-servlet/trans.jpg", desc:"遷移図です。"},
+            {img:"images/jsp-servlet/db.jpg", desc:"データベースで使用しているテーブル構造です。"},
         ]
     }
 ]
