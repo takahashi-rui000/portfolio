@@ -39,7 +39,7 @@ sliderData = [
             {img:"images/jsp-servlet/index.png", desc:"トップページです。各種ページへ飛ぶ事ができます。"},
             {img:"images/jsp-servlet/add.png", desc:"新規作成ページです。各欄にrequited属性があり、入力が求められます。入力規則に反した内容の場合、エラーが表示されます。"},
             {img:"images/jsp-servlet/create.png", desc:"正規な入力がされた場合、データベースへデータが登録されます。"},
-            {img:"images/jsp-servlet/listAll.png", desc:"一覧表示ページです。ログインIDをクリックするとユーザー編集ページへ遷移され、削除ボタンをクリックすると削除ページへ遷移されます。"},
+            {img:"images/jsp-servlet/listall.png", desc:"一覧表示ページです。ログインIDをクリックするとユーザー編集ページへ遷移され、削除ボタンをクリックすると削除ページへ遷移されます。"},
             {img:"images/jsp-servlet/edit.png", desc:"ユーザーの情報を編集できます。"},
             {img:"images/jsp-servlet/update.png", desc:"正規な入力がされた場合、データベースのデータが更新されます。"},
             {img:"images/jsp-servlet/confirm.png", desc:"削除確認画面です。削除ボタンを押すと確定されます。"},
