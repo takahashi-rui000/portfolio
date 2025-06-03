@@ -1,3 +1,4 @@
+// 配列に画像のパスと説明を格納
 sliderData = [
     {
         sliderId: "slider_rpg",
@@ -56,27 +57,33 @@ sliderData = [
 sliderData.forEach(({sliderId, slides}) =>{
     const slider = document.getElementById(sliderId);
 
+    // スライド全体を包むラッパー要素を作成
     const slideWrapper = document.createElement("div");
     slideWrapper.className = "slides-wrapper";
 
     slides.forEach(({img, desc}) => {
+        // 非表示のスライド用<div>を作成しクラスとスタイルを設定
         const slide = document.createElement("div");
         slide.className = "slide";
         slide.style.display = "none";
 
+        // 画像要素を作成し、画像パスを設定
         const imgEle = document.createElement("img");
         imgEle.src = img;
-        imgEle.alt = desc;
 
+        // 説明文の<p>を作成
         const desEle = document.createElement("p");
         desEle.textContent = desc;
 
+        // slideへ画像と説明文を追加
         slide.appendChild(imgEle);
         slide.appendChild(desEle);
         slideWrapper.appendChild(slide);
     });
+    // sliderへslideWrapperを追加
     slider.appendChild(slideWrapper);
 
+    // 戻るボタンと進むボタンを作成し、クラスとテキストを設定
     const prevBtn = document.createElement("button");
     prevBtn.textContent = "←";
     prevBtn.classList.add("prev");
@@ -84,17 +91,19 @@ sliderData.forEach(({sliderId, slides}) =>{
     nextBtn.textContent = "→";
     nextBtn.classList.add("next");
 
-
+    // 現在表示中のスライドのインデックス
     let currentIndex = 0;
     const allSlides = slideWrapper.querySelectorAll(".slide");
     
+    // ページ情報表示用の<p>要素を設定
     const pageInfo = document.createElement("p");
     pageInfo.className = "page-info";
-    slider.appendChild(pageInfo);
 
+    slider.appendChild(pageInfo);
     slider.appendChild(prevBtn);
     slider.appendChild(nextBtn);
 
+    // 指定したスライドを表示し、他は非表示にする。
     function showSlide(index) {
         allSlides.forEach((slide, i) => {
             if(i === currentIndex) {
@@ -103,18 +112,24 @@ sliderData.forEach(({sliderId, slides}) =>{
                 slide.style.display = "none";
             }
         })
+        // ページ数を更新
         pageInfo.textContent = `${currentIndex+1} / ${allSlides.length}`
     }
 
+    // 戻るボタンの処理
+    // クリックされたらインデックスを一つ戻し、表示を更新する
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + allSlides.length) % allSlides.length;
         showSlide();
     })
 
+    // 進むようボタンの処理
+    // クリックされたらインデックスを一つ進み、表示を更新する
     nextBtn.addEventListener("click", () =>{
         currentIndex = (currentIndex + 1 + allSlides.length) % allSlides.length;
         showSlide();
     })
 
+    // 初期表示
     showSlide();
 });
