@@ -7,7 +7,7 @@ public class FieldCity_1 extends FieldCity_Origin implements KeyListener{
 	
 	FieldCity_1(){
 		super(0);
-		this.prepareShop(0, 1, 51, 101, 106);
+		this.prepareShop(0, 1, 51, 101);
 		this.addKeyListener(this);
 	}
 

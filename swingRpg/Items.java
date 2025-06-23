@@ -57,7 +57,7 @@ public class Items {
 		itemEffect[57] = 5;
 		itemName[58] = "金剛石の剣";
 		itemValue[58] = 300000;
-		itemEffect[58] = 150;
+		itemEffect[58] = 130;
 		
 		itemName[60] = "エクスカリバー";
 		itemValue[60] = 0;
@@ -68,33 +68,32 @@ public class Items {
 		itemValue[100] = 0;
 		itemEffect[100] = 0;
 		itemName[101] = "布の服";
-		itemValue[101] = 30;
+		itemValue[101] = 50;
 		itemEffect[101] = 10;
 		itemName[102] = "頑丈な布の服";
-		itemValue[102] = 260;
+		itemValue[102] = 300;
 		itemEffect[102] = 25;
 		itemName[103] = "さびた鎧";
-		itemValue[103] = 3200;
+		itemValue[103] = 4000;
 		itemEffect[103] = 45;
 		itemName[104] = "鉄の鎧";
-		itemValue[104] = 17000;
+		itemValue[104] = 20000;
 		itemEffect[104] = 70;
 		itemName[105] = "鋼鉄の鎧";
-		itemValue[105] = 80000;
+		itemValue[105] = 100000;
 		itemEffect[105] = 90;
 		itemName[106] = "黄金の鎧";
 		itemValue[106] = 2147483647;
 		itemEffect[106] = 5;
 		itemName[107] = "金剛石の鎧";
-		itemValue[107] = 250000;
-		itemEffect[107] = 150;
+		itemValue[107] = 300000;
+		itemEffect[107] = 130;
 		
 		itemName[110] = "伝説の鎧";
 		itemValue[110] = 5000000;
 		itemEffect[110] = 1000;
 	}
-	
-	
+
 	public static int getItemValue(int index) {
 		return itemValue[index];
 	}
@@ -105,7 +104,6 @@ public class Items {
 		return itemEffect[index];
 		
 	}
-	
 
 	public static void setItemValue(int[] itemValue) {
 		Items.itemValue = itemValue;

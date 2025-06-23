@@ -2,12 +2,12 @@ package swingRpg;
 
 public class Savedata {
 
-	private Character_Player player;
-	private int currentLocation_X;
-	private int currentLocation_Y;
-	private int currentFieldIndex;
-	private boolean[] bossFlag;
-	private boolean[] itemFlag;
+	Character_Player player;
+	int currentLocation_X;
+	int currentLocation_Y;
+	int currentFieldIndex;
+	boolean[] bossFlag;
+	boolean[] itemFlag;
 	
 	Savedata(Character_Player player, int currentLocation_X, int currentLocation_Y, int currentFieldIndex, boolean[] bossFlag, boolean[] itemFlag){
 		this.player = player;
@@ -20,11 +20,6 @@ public class Savedata {
 	
 	Savedata(){
 	}
-	
-	
-	
-	
-	
 	
 	public Character_Player getPlayer() {
 		return player;
@@ -44,6 +39,11 @@ public class Savedata {
 	public boolean[] getItemFlag() {
 		return itemFlag;
 	}
+	
+	
+
+
+
 
 	public void setPlayer(Character_Player player) {
 		this.player = player;

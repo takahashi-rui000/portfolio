@@ -114,7 +114,7 @@ public class FieldItemPanel extends JPanel implements KeyListener{
 		selectedLabel.setBounds(0, 0, 0, 0);
 	}
 	
-	private static void enterPressed() {
+	private static void pressedEnter() {
 		FieldSystem.heal(itemIds.get(selectedNum));
 	} 
 	
@@ -131,7 +131,7 @@ public class FieldItemPanel extends JPanel implements KeyListener{
 		}else if(e.getKeyCode() == 27) {
 			escPressed();
 		}else if(e.getKeyCode() == 10) {
-			enterPressed();
+			pressedEnter();
 		}
 		
 	}

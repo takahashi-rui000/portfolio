@@ -50,7 +50,7 @@ public class FieldEquipmentPanel extends JPanel implements KeyListener{
 		this.add(selectedLabel);
 	}
 	
-	//  所持中のアイテムIDを入れた可変長配列を返す
+	//  アイテムIDが入った可変長配列を取得
 	private static void updateItemIds() {
 		itemIds.clear();
 		for(int i=50; i < 150; i++) {
@@ -61,6 +61,7 @@ public class FieldEquipmentPanel extends JPanel implements KeyListener{
 	}
 	
 	public void setLabel() {
+		
 		updateItemIds();
 		if(itemIds.size() == 0) {
 			itemLabel[0].setText("アイテムがありません");
@@ -70,7 +71,6 @@ public class FieldEquipmentPanel extends JPanel implements KeyListener{
 		}
 	}
 	
-	//  装備のアイテム数に応じてページの内容切り替え
 	private void displayItems(int index) {
 		System.out.println("表示");
 		for(int i=0; i < 8 ; i++) {
@@ -96,7 +96,6 @@ public class FieldEquipmentPanel extends JPanel implements KeyListener{
 		}
 	}
 	
-	//  選択ラベルを動かす
 	private void moveSelectedLabel(KeyEvent e) {
 		updateItemIds();
 		switch(e.getKeyCode()) {
@@ -134,7 +133,6 @@ public class FieldEquipmentPanel extends JPanel implements KeyListener{
 		setSelectedLabel();
 	}
 	
-	//  ページ切り替え
 	private void pageSwitching(KeyEvent e) {
 		switch(e.getKeyCode()) {
 		case 37:
@@ -156,7 +154,6 @@ public class FieldEquipmentPanel extends JPanel implements KeyListener{
 		}
 	}
 	
-	//  
 	public static void setSelectedLabel() {
 		selectedLabel.setBounds(5, 18 + selectedNum * 35, 10, 18);
 	}

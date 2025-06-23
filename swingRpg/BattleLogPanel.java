@@ -54,7 +54,6 @@ public class BattleLogPanel extends JPanel implements KeyListener{
 		textArr.add(text);
 	}
 	
-	//  中身をクリア
 	public static void clearLogLabel() {
 		battleLogLabel[0].setText("");
 		battleLogLabel[1].setText("");
@@ -100,7 +99,7 @@ public class BattleLogPanel extends JPanel implements KeyListener{
 	public static JLabel[] getBattleLogLabel() {
 		return battleLogLabel;
 	}
-	public static int getTargetNum() {
+		public static int getTargetNum() {
 		return targetNum;
 	}
 	public static boolean isBattleEnd() {

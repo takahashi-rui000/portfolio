@@ -72,7 +72,7 @@ public class BattleCommandSelectPanel extends JPanel implements KeyListener{
 		setSelectedLabel();
 	}
 	
-	private static void enterPressed() {
+	private static void pressedEnter() {
 		switch(selectedNum) {
 		case 0:
 			MainWindow.getBattlePanel().displayEnemySelectPanel();
@@ -98,7 +98,7 @@ public class BattleCommandSelectPanel extends JPanel implements KeyListener{
 		if(e.getKeyCode() == 38 || e.getKeyCode() == 40) {
 			moveSelectedLabel(e);
 		}else if(e.getKeyCode() == 10) {
-			enterPressed();
+			pressedEnter();
 		}
 	}
 

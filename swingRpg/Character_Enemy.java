@@ -3,8 +3,8 @@ package swingRpg;
 import javax.swing.ImageIcon;
 
 public class Character_Enemy extends Character{
-	private ImageIcon icon;
-	private int exp;
+	ImageIcon icon;
+	int exp;
 	
 	Character_Enemy(String name, int maxHp, int attack, int agility, int defence, int exp) {
 		super(name, maxHp, attack, agility, defence);

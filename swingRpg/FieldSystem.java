@@ -16,30 +16,36 @@ public class FieldSystem {
 	private static int field_7[][] = new int[20][15];
 	private static boolean[] bossFlag;
 	private static boolean[] itemFlag;
-	final private static ImageIcon grass = new ImageIcon("./images\\road\\kusa0.png");
-	final private static ImageIcon grass2 = new ImageIcon("./images\\road\\kusa1.png");
-	final private static ImageIcon grass4 = new ImageIcon("./images\\road\\kusa4.png");
-	final private static ImageIcon grass5 = new ImageIcon("./images\\road\\kusa5");
-	final private static ImageIcon grassChest = new ImageIcon("./images\\building\\grassChest.png");
-	final private static ImageIcon grassCasino = new ImageIcon("./images\\building\\grassCasino.png");
-	final private static ImageIcon rock = new ImageIcon("./images\\wall\\iwa1.png");
-	final private static ImageIcon dark = new ImageIcon("./images\\wall\\dark.png");
-	final private static ImageIcon demonWorldGrass = new ImageIcon("./images\\road\\demonWorldGrass.png");
-	final private static ImageIcon demonWorldRock = new ImageIcon("./images\\wall\\demonWorldRock.png");
-	final private static ImageIcon demonWorldCity = new ImageIcon("./images\\building\\demonWorldCity.png");
-	final private static ImageIcon demonWorldCasino = new ImageIcon("./images\\building\\demonWorldCasino.png");
-	final private static ImageIcon demonWorldCastle = new ImageIcon("./images\\building\\demonWorldCastle.png");
-	final private static ImageIcon caveRoad = new ImageIcon("./images\\road\\caveRoad.png");
-	final private static ImageIcon city = new ImageIcon("./images\\building\\house1.png");
-	final private static ImageIcon dungeonRoad = new ImageIcon("./images\\road\\dungeon.png");
-	final private static ImageIcon dungeonWall = new ImageIcon("./images\\wall\\dungeon.png");
-	final private static ImageIcon bossMass_0 = new ImageIcon("./images\\bossMass\\slime.png");
-	final private static ImageIcon bossMass_1 = new ImageIcon("./images\\bossMass\\goblin.png");
-	final private static ImageIcon bossMass_2 = new ImageIcon("./images\\bossMass\\genbu.png");
-	final private static ImageIcon bossMass_3 = new ImageIcon("./images\\bossMass\\suzaku.png");
-	final private static ImageIcon bossMass_4 = new ImageIcon("./images\\bossMass\\byakko.png");
-	final private static ImageIcon bossMass_5 = new ImageIcon("./images\\bossMass\\seiryu.png");
-	final private static ImageIcon bossMass_6 = new ImageIcon("./images\\bossMass\\mao.png");
+	final private static ImageIcon grass = new ImageIcon("./images\\sozai\\kusa0.png");
+	final private static ImageIcon grass2 = new ImageIcon("./images\\sozai\\kusa1.png");
+	final private static ImageIcon grass4 = new ImageIcon("./images\\sozai\\kusa4.png");
+	final private static ImageIcon grass5 = new ImageIcon("./images\\sozai\\kusa5");
+	final private static ImageIcon grassChest = new ImageIcon("./images\\sozai\\grassChest.png");
+	final private static ImageIcon grassCasino = new ImageIcon("./images\\sozai\\grassCasino.png");
+	final private static ImageIcon rock = new ImageIcon("./images\\sozai\\iwa1.png");
+	final private static ImageIcon dark = new ImageIcon("./images\\sozai\\cave\\dark.png");
+	final private static ImageIcon demonWorldGrass = new ImageIcon("./images\\sozai\\demonWorldGrass.png");
+	final private static ImageIcon demonWorldRock = new ImageIcon("./images\\sozai\\demonWorldRock.png");
+	final private static ImageIcon demonWorldCity = new ImageIcon("./images\\sozai\\demonWorldCity.png");
+	final private static ImageIcon demonWorldCasino = new ImageIcon("./images\\sozai\\demonWorldCasino.png");
+	final private static ImageIcon demonWorldCastle = new ImageIcon("./images\\sozai\\demonWorldCastle.png");
+	final private static ImageIcon caveWall_0 = new ImageIcon("./images\\sozai\\cave\\caveWall0.png");
+	final private static ImageIcon caveWall_1 = new ImageIcon("./images\\sozai\\cave\\caveWall1.png");
+	final private static ImageIcon caveWall_2 = new ImageIcon("./images\\sozai\\cave\\caveWall2.png");
+	final private static ImageIcon caveWall_3 = new ImageIcon("./images\\sozai\\cave\\caveWall3.png");
+	final private static ImageIcon caveCorner_0 = new ImageIcon("./images\\sozai\\cave\\caveCorner0.png");
+	final private static ImageIcon caveCorner_1 = new ImageIcon("./images\\sozai\\cave\\caveCorner1.png");
+	final private static ImageIcon caveCorner_2 = new ImageIcon("./images\\sozai\\cave\\caveCorner2.png");
+	final private static ImageIcon caveCorner_3 = new ImageIcon("./images\\sozai\\cave\\caveCorner3.png");
+	final private static ImageIcon caveRoad = new ImageIcon("./images\\sozai\\cave\\caveRoad.png");
+	final private static ImageIcon city = new ImageIcon("./images\\sozai\\house1.png");
+	final private static ImageIcon bossMass_0 = new ImageIcon("./images\\sozai\\bossMass\\bossSlime.png");
+	final private static ImageIcon bossMass_1 = new ImageIcon("./images\\sozai\\bossMass\\bossGoblin.png");
+	final private static ImageIcon bossMass_2 = new ImageIcon("./images\\sozai\\bossMass\\bossGoblin.png");
+	final private static ImageIcon bossMass_3 = new ImageIcon("./images\\sozai\\bossMass\\bossGoblin.png");
+	final private static ImageIcon bossMass_4 = new ImageIcon("./images\\sozai\\bossMass\\bossGoblin.png");
+	final private static ImageIcon bossMass_5 = new ImageIcon("./images\\sozai\\bossMass\\bossGoblin.png");
+	
 	private static int encounter = 6;
 	
 	public static ImageIcon returnImage(int n) {
@@ -54,8 +60,6 @@ public class FieldSystem {
 			return caveRoad;
 		case 3:
 			return demonWorldGrass;
-		case 4:
-			return dungeonRoad;
 		case 9:
 			return demonWorldCastle;
 		//  町
@@ -76,8 +80,6 @@ public class FieldSystem {
 			return dark;
 		case 32:
 			return demonWorldRock;
-		case 33:
-			return dungeonWall;
 		case 90:
 			return grassChest;
 		case 100:
@@ -92,8 +94,6 @@ public class FieldSystem {
 			return bossMass_4;
 		case 105:
 			return bossMass_5;
-		case 106:
-			return bossMass_6;
 		}
 		return null;
 	}
@@ -120,7 +120,6 @@ public class FieldSystem {
 				field_1[19][y] = 30;
 			}
 		}
-		field_1[0][7] = 30;
 		field_1[3][7] = 10;
 		field_1[5][7] = 20;
 		field_1[18][7] = 100;
@@ -253,19 +252,7 @@ public class FieldSystem {
 		field_4[1][7] = 104;
 		field_4[18][7] = 105;
 		field_4[9][7] = 9;
-	}
-	
-	public static void prepareField_5() {
-		for(int x=0; x < 20; x++) {
-			for(int y=0; y < 15; y++) {
-				if(x == 0 || x == 19 || y == 0 || y == 14) {
-					field_5[x][y] = 33;
-				}else {
-					field_5[x][y] = 4;
-				}
-			}
-		}
-		field_5[9][3] = 106;
+		
 	}
 	
 	//  指定されたフィールドを現在のマップに適応
@@ -292,6 +279,7 @@ public class FieldSystem {
 			currentFieldIndex = 1;
 			currentField = field_2;
 			FieldMassPanel.setFIeldLabelImage(currentField);
+			System.out.println(bossFlag[1]);
 			if(bossFlag[1]) {
 				field_1[7][1] = 1;
 			}
@@ -318,18 +306,7 @@ public class FieldSystem {
 			currentField = field_4;
 			FieldMassPanel.setFIeldLabelImage(currentField);
 			break;
-		case 4:
-			if(bossFlag[6]) {
-				field_5[9][3] = 4;
-			}
-			FieldSystem.setCurrentLocation_X(9);
-			FieldSystem.setCurrentLocation_Y(13);
-			currentFieldIndex = 4;
-			currentField = field_5;
-			FieldMassPanel.setFIeldLabelImage(currentField);
-			break;
 		}
-		FieldPanel.repaintPlayer();
 	}
 	
 	//  障害物判定、障害物があるとtrue
@@ -343,6 +320,7 @@ public class FieldSystem {
 	
 	//  エリア外判定
 	public static boolean isOutsideArea(int x, int y) {
+			System.out.println("index:"+currentFieldIndex);
 		switch(currentFieldIndex) {
 		case 0:
 			if(currentLocation_X == 19) {
@@ -391,6 +369,7 @@ public class FieldSystem {
 			}
 			break;
 		case 4:
+			break;
 		case 5:
 			break;
 		case 6:
@@ -430,7 +409,7 @@ public class FieldSystem {
 			Observer.getMainWindow().setFrontPanelAndFocus(ScreenMode.BLACKJACK);
 			break;
 		case 21:
-			BlackjackGame.setMaxBet(100000);
+			BlackjackGame.setMaxBet(20000);
 			Observer.getMainWindow().setFrontPanelAndFocus(ScreenMode.BLACKJACK);
 			break;
 		case 90:
@@ -443,7 +422,6 @@ public class FieldSystem {
 		case 103:
 		case 104:
 		case 105:
-		case 106:
 		//  ボス
 			bossBattle();
 			break;
@@ -565,11 +543,10 @@ public class FieldSystem {
 				FieldLogPanel.addTextArr("南、朱雀");
 			}
 		}else {
-			adaptField(4);
+			FieldLogPanel.addTextArr("入城した");
 		}
 	}
 	
-	//  ボス戦
 	private static void bossBattle() {
 		switch(currentField[currentLocation_X][currentLocation_Y]) {
 		case 100:
@@ -589,9 +566,6 @@ public class FieldSystem {
 			break;
 		case 105:
 			battleStart((Character_Enemy)(new Character_Enemy_Boss_Seiryu()));
-			break;
-		case 106:
-			battleStart((Character_Enemy)(new Character_Enemy_Boss_Mao()));
 			break;
 		}
 	}
@@ -613,10 +587,11 @@ public class FieldSystem {
 			currentLocation_Y = 7;
 			break;
 		case 3:
-		case 4:
 			adaptField(3);
 			currentLocation_X = 5;
 			currentLocation_Y = 5;
+			break;
+		case 4:
 			break;
 		case 5:
 			break;
@@ -631,13 +606,6 @@ public class FieldSystem {
 		FieldLogPanel.addTextArr("所持金が" + BattleSystem.getPlayer().getGold() / 2 + "減りました");
 		BattleSystem.getPlayer().setGold(BattleSystem.getPlayer().getGold() / 2);
 		BattleSystem.getPlayer().setCurrentHp(BattleSystem.getPlayer().getMaxHp());
-	}
-	
-	//  ゲームクリア
-	public static void gameClear() {
-		FieldLogPanel.addTextArr("ゲームクリアおめでとうございます！");
-		FieldLogPanel.addTextArr("強くてニューゲームしたい場合は、");
-		FieldLogPanel.addTextArr("ctrlキーを押し、[newGame]と打ってください！");
 	}
 	
 	//  購入
@@ -665,7 +633,6 @@ public class FieldSystem {
 		}
 	}
 	
-	
 	//  ゲッター
 	public static int[][] getfield_1() {
 		return field_1;
@@ -691,7 +658,10 @@ public class FieldSystem {
 	public static boolean[] getItemFlag() {
 		return itemFlag;
 	}
-	
+
+
+
+
 	//  セッター
 	public static void setfield_1(int[][] field_1) {
 		FieldSystem.field_1 = field_1;
@@ -708,7 +678,7 @@ public class FieldSystem {
 	public static void setCurrentFieldIndex(int currentFieldIndex) {
 		FieldSystem.currentFieldIndex = currentFieldIndex;
 	}
-	public static void setBossFlag(boolean flag, int index) {
+	public static void setBossFlag(int index, boolean flag) {
 		FieldSystem.bossFlag[index] = flag;
 	}
 	public static void setBossFlag(boolean[] bossFlag) {
@@ -716,9 +686,6 @@ public class FieldSystem {
 	}
 	public static void setItemFlag(boolean[] itemFlag) {
 		FieldSystem.itemFlag = itemFlag;
-	}
-	public static void setItemFlag(boolean itemFlag, int index) {
-		FieldSystem.itemFlag[index] = itemFlag;
 	}
 	public static void setEncounter(int encounter) {
 		FieldSystem.encounter = encounter;

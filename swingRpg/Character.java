@@ -58,7 +58,7 @@ public abstract class Character {
 	public int getAttack() {return attack;}
 	public int getAgility() {return agility;}
 	public int getDefence() {return defence;}
-
+		
 	//  セッター
 	public void setMaxHp(int maxHp) {this.maxHp = maxHp;}
 	public void setCurrentHp(int hp) {this.currentHp = hp;}

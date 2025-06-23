@@ -66,7 +66,6 @@ public class FieldMassPanel extends JPanel implements KeyListener{
 		}
 	}
 	
-	//  プレイヤー画像準備
 	public void preparePlayerImage() {
 		playerImage = new JLabel();
 		playerImage.setBounds(1*40, 7*40, 40, 40);
@@ -271,12 +270,10 @@ public class FieldMassPanel extends JPanel implements KeyListener{
 		}
 	}
 	
-	//  渡されたxyの位置に画像設置
 	public static void setImg(int x, int y, int index) {
 		fieldLabel[x][y].setIcon(FieldSystem.returnImage(index));
 	}
 	
-	//  プレイヤーの再描写
 	public static void repaintPlayer() {
 		playerImage.setBounds(FieldSystem.getCurrentLocation_X() * 40, FieldSystem.getCurrentLocation_Y() * 40, playerImage.getWidth(), playerImage.getHeight());
 	}
@@ -305,7 +302,9 @@ public class FieldMassPanel extends JPanel implements KeyListener{
 	public static void setWalk(int walk) {
 		FieldMassPanel.walk = walk;
 	}
-	
+
+
+
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO 自動生成されたメソッド・スタブ
@@ -317,9 +316,9 @@ public class FieldMassPanel extends JPanel implements KeyListener{
 			inputArrow(e);
 		}else if(e.getKeyCode() == 27) {
 			if(walk == -1) {
-				MainWindow.getFieldPanel().showStatus();
+				MainWindow.getFieldPanel().statusDisplay();
 			}
-		}else if(e.getKeyCode() == 17) {
+		}else if(e.getKeyCode() == 155) {
 			MainWindow.getFieldPanel().showCommandPanel();
 		}
 	}

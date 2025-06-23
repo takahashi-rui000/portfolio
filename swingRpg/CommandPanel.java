@@ -40,7 +40,7 @@ public class CommandPanel extends JPanel implements KeyListener{
 		log[log.length-1].setText(text);
 	}
 	
-	public static void enterPressed() {
+	private static void pressedEnterKey() {
 		CommandSystem.commandDecision(inputCommand);
 		updataCommand();
 	}
@@ -58,12 +58,7 @@ public class CommandPanel extends JPanel implements KeyListener{
 		log[log.length-1].setText(inputCommand);
 	}
 	
-	public static void inputCommandSystem(String s) {
-		inputCommand = s;
-		log[log.length-1].setText(inputCommand);
-	}
-	
-	private static void backSpaceKeyPressed() {
+	private static void pressedBackSpaceKey() {
 		if(inputCommand.length() > 0) {
 			inputCommand = inputCommand.substring(0, inputCommand.length() - 1);
 			log[log.length-1].setText(inputCommand);
@@ -79,10 +74,10 @@ public class CommandPanel extends JPanel implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == 10) {
-			enterPressed();
+			pressedEnterKey();
 		}else if(e.getKeyCode() == 8) {
-			backSpaceKeyPressed();
-		}else if(e.getKeyCode() == 17){
+			pressedBackSpaceKey();
+		}else if(e.getKeyCode() == 155){
 			MainWindow.getFieldPanel().hideCommandPanel();
 		}else if(e.getKeyCode() == 38) {
 			inputCommand = log[log.length - 3].getText();

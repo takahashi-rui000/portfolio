@@ -18,7 +18,6 @@ public class BlackjackDealerFieldPanel extends JPanel{
 		this.setBorder(new LineBorder(Color.white, 2));
 	}
 	
-	//  カードラベルを配置
 	public void addCard(ImageIcon icon) {
 		JLabel label = new JLabel();
 		dealerCardLabel.add(label);
@@ -31,20 +30,17 @@ public class BlackjackDealerFieldPanel extends JPanel{
 		this.setComponentZOrder(label, 0);
 	}
 	
-	//  カードを描写
 	public void openCard() {
 		dealerCardLabel.get(1).setIcon(BlackjackGame.getDealer().getCards().get(1).getIcon());
 		this.repaint();
 	}
 	
-	//  カードの位置調整
 	private void positioningCard() {
 		for(int i=0; i < dealerCardLabel.size(); i++) {
 			dealerCardLabel.get(i).setBounds((200 - ((138 + (25 * dealerCardLabel.size() - 1 - i)) / 2)) + i * 30, 3, 138, 196);
 		}
 	}
 	
-	//  カードラベルをクリア
 	public void clearDealerCardLabel() {
 		for(JLabel label : dealerCardLabel) {
 			this.remove(label);

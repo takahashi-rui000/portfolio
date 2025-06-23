@@ -4,7 +4,7 @@ public class CommandSystem {
 	
 	public static void commandDecision(String command) {
 		try {
-				
+			
 		}catch(NumberFormatException e) {
 			CommandPanel.addLog("");
 		}
@@ -21,12 +21,6 @@ public class CommandSystem {
 				jud = true;
 			}
 		}
-		if(command.length() >= 18) {
-			if(command.substring(0, 14).equals("useStatusPoint")) {
-				useStatusPoint(command);
-				jud = true;
-			}
-		}
 		if(command.length() >= 16) {
 			if(command.substring(0, 14).equals("addStatusPoint")) {
 				addStatusPoint(command);
@@ -34,46 +28,21 @@ public class CommandSystem {
 			}
 		}
 		if(command.length() >= 12) {
-			if(command.equals("displayTitle")) {
-				displayTitle();
-				jud = true;
-			}else if(command.substring(0, 8).equals("teleport")) {
+			if(command.substring(0, 8).equals("teleport")) {
 				teleport(command);
 				jud = true;
 			}else if(command.substring(0, 10).equals("setEncount")) {
 				setEncount(command);
 				jud = true;
-			} 
-		}
-		if(command.length() >= 11) {
-			if(command.substring(0, 11).equals("resetStatus")) {
-				resetStatus();
-				jud = true;
 			}
 		}
-		if(command.length() >= 9) {
-			if(command.substring(0, 9).equals("changeMap")) {
-				changeMap(command);
-				jud = true;
-			}
-		}
-		if(command.length() >= 8) {
+		if(command.length() >= 7) {
 			if(command.substring(0, 8).equals("giveItem")) {
 				giveItem(command);
 				jud = true;
 			}
-			if(command.substring(0, 8).equals("clearLog")) {
-				clearLog();
-				jud = true;
-			}
-		}
-		if(command.length() >= 7) {
 			if(command.substring(0, 7).equals("addGold")) {
 				addGold(command);
-				jud = true;
-			}
-			if(command.substring(0, 7).equals("newGame")) {
-				newGame();
 				jud = true;
 			}
 		}
@@ -117,8 +86,6 @@ public class CommandSystem {
 			CommandPanel.addLog("ステータスの変更に成功しました。");
 		}catch(NumberFormatException e) {
 			CommandPanel.addLog("数字を認識できませんでした。[setStatus String int int int int]で入力してください");
-		}catch(java.lang.ArrayIndexOutOfBoundsException e) {
-			CommandPanel.addLog("数字を認識できませんでした。[setStatus String int int int int]で入力してください");
 		}
 	}
 	
@@ -132,11 +99,6 @@ public class CommandSystem {
 		}
 	}
 	
-	//  タイトルパネルへ偏移
-	private static void displayTitle() {
-		Observer.getMainWindow().setFrontPanelAndFocus(ScreenMode.TITLE);
-	}
-	
 	//  テレポート
 	private static void teleport(String command) {
 		if(command.substring(0, 8).equals("teleport")) {
@@ -146,7 +108,6 @@ public class CommandSystem {
 					FieldSystem.setCurrentLocation_X(Integer.parseInt(arr[0]));
 					FieldSystem.setCurrentLocation_Y(Integer.parseInt(arr[1]));
 					FieldPanel.repaintPlayer();
-					CommandPanel.addLog("テレポートしました。");
 				}else {
 					CommandPanel.addLog("数字が大きすぎます。19以下,14以下で打ってください。");
 				}
@@ -200,73 +161,10 @@ public class CommandSystem {
 		}
 	}
 	
-	//  ステータスリセット
-	private static void resetStatus() {
-		for(int i=50; i < BattleSystem.getPlayer().getMaxHp(); i += 5) {
-			BattleSystem.getPlayer().setStatusPoint(BattleSystem.getPlayer().getStatusPoint() + 1);
-		}
-		for(int i=30; i < BattleSystem.getPlayer().getAttack(); i += 2) {
-			BattleSystem.getPlayer().setStatusPoint(BattleSystem.getPlayer().getStatusPoint() + 1);
-		}
-		for(int i=30; i < BattleSystem.getPlayer().getDefence(); i += 2) {
-			BattleSystem.getPlayer().setStatusPoint(BattleSystem.getPlayer().getStatusPoint() + 1);
-		}
-		for(int i=30; i < BattleSystem.getPlayer().getAgility(); i += 2) {
-			BattleSystem.getPlayer().setStatusPoint(BattleSystem.getPlayer().getStatusPoint() + 1);
-		}
-		BattleSystem.getPlayer().setMaxHp(50);
-		BattleSystem.getPlayer().setAttack(30);
-		BattleSystem.getPlayer().setDefence(30);
-		BattleSystem.getPlayer().setAgility(30);
-		if(BattleSystem.getPlayer().getCurrentHp() > BattleSystem.getPlayer().getMaxHp()) {
-			BattleSystem.getPlayer().setCurrentHp(BattleSystem.getPlayer().getMaxHp());
-		}
-	}
-	
-	//  ステポイント使用
-	private static void useStatusPoint(String command) {
-		//  useStatusPoint statusIndex point
-		String[] arr = command.substring(15).split(" ");
-		if(BattleSystem.getPlayer().getStatusPoint() >= Integer.parseInt(arr[1])) {
-			for(int i=0; i < Integer.parseInt(arr[1]); i++) {
-				BattleSystem.getPlayer().statusUp(Integer.parseInt(arr[0]));
-			}
-			CommandPanel.addLog("ステータスポイントを" + arr[1] + "回使用しました。");
-		}else {
-			CommandPanel.addLog("ステータスポイントが足りていません。");
-		}
-	}
-	
-	//  マップ変更
-	private static void changeMap(String command) {
-		if(Integer.parseInt(command.substring(10)) >= 1 && Integer.parseInt(command.substring(10)) <= 5) {
-			FieldSystem.adaptField(Integer.parseInt(command.substring(10)));
-			CommandPanel.addLog(command.substring(10) + "番目のフィールドへ変更しました");
-		}
-	}
-	
-	//  ニューゲーム
-	private static void newGame() {
-		for(int i=0; i<FieldSystem.getBossFlag().length; i++) {
-			FieldSystem.setBossFlag(false, i);
-		}
-		for(int i=0; i<FieldSystem.getItemFlag().length; i++) {
-			FieldSystem.setItemFlag(false, i);
-		}
-		FieldSystem.adaptField(0);
-		FieldSystem.setCurrentLocation_X(1);
-		FieldSystem.setCurrentLocation_Y(7);
-		FieldMassPanel.repaintPlayer();
-		resetStatus();
-		BattleSystem.getPlayer().setExp(0);
-		BattleSystem.getPlayer().setLevel(1);
-		BattleSystem.getPlayer().setNextLevelExp(50);
-	}
-	
 	//  セーブ
 	private static void save() {
 		SaveAndLoad.dataSave();
-		CommandPanel.addLog("ロードしました");
+		CommandPanel.addLog("セーブしました");
 	}
 	
 	//  ロード
@@ -275,10 +173,6 @@ public class CommandSystem {
 		CommandPanel.addLog("セーブしました");
 	}
 	
-	//  消去ログ
-	private static void clearLog() {
-		FieldLogPanel.getTextArr().clear();
-		CommandPanel.addLog("溜まっているログをクリアしました。");
-	}
+
 	
 }

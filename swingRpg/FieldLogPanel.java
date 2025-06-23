@@ -71,6 +71,7 @@ public class FieldLogPanel extends JPanel{
 		}
 	}
 	
+	
 	//  ゲッター
 	public static JLabel[] getFieldLogLabel() {
 		return fieldLogLabel;
@@ -86,5 +87,4 @@ public class FieldLogPanel extends JPanel{
 	public static void setTextArr(ArrayList<String> textArr) {
 		FieldLogPanel.textArr = textArr;
 	}
-
 }

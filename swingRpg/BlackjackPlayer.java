@@ -1,9 +1,9 @@
 package swingRpg;
 
 public class BlackjackPlayer extends BlackjackGameParticipant{
-	private boolean end = false;
-	private boolean doubleDown;
-	private boolean surrender;
+	boolean end = false;
+	boolean doubleDown;
+	boolean surrender;
 	
 	BlackjackPlayer(){
 		super();

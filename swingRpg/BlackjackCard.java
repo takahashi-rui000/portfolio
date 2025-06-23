@@ -86,7 +86,6 @@ public class BlackjackCard {
 		return new ImageIcon(sprite);
 	}
 	
-	
 	//  ゲッター
 	public String getSuit() {
 		return suit;
@@ -119,7 +118,9 @@ public class BlackjackCard {
 	public ImageIcon getIcon() {
 		return icon;
 	}
-	
+
+
+
 	//  セッター
 	public void setSuit(String suit) {
 		this.suit = suit;

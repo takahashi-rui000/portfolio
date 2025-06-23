@@ -157,11 +157,10 @@ public class BlackjackGame {
 		BlackjackGame.player = player;
 	}
 	public static void setMaxBet(int maxBet) {
-		MainWindow.getBlackjackPanel().repaint();
-		BlackjackPanel.setGoldLabel((BattleSystem.getPlayer().getGold()));
 		BlackjackGame.maxBet = maxBet;
 	}
 	public static void setBet(int bet) {
 		BlackjackGame.bet = bet;
 	}
+	
 }

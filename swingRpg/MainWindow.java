@@ -31,7 +31,6 @@ public class MainWindow extends JFrame{
 		FieldSystem.prepareField_2();
 		FieldSystem.prepareField_3();
 		FieldSystem.prepareField_4();
-		FieldSystem.prepareField_5();
 		fieldPanel = new FieldPanel();
 		fieldPanel.preparePanels();
 		FieldSystem.adaptField(0);
@@ -66,7 +65,6 @@ public class MainWindow extends JFrame{
 			break;
 		case TITLE:
 			layout.show(this.getContentPane(), "titlePanel");
-			TitlePanel.getTitleSelectModePanel().requestFocus();
 			break;
 		case BLACKJACK:
 			blackjackPanel.requestFocus();

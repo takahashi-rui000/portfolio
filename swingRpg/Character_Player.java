@@ -47,7 +47,7 @@ public class Character_Player extends Character{
 	//  レベルアップ処理
 	public void levelUp() {
 		int r;
-		r = new java.util.Random().nextInt(10)+4;
+		r = new java.util.Random().nextInt(6)+2;
 		this.setMaxHp(this.getMaxHp() + r);
 		BattleLogPanel.addBattleLogTextArr("最大体力が" + r + "上がった！");
 		r = new java.util.Random().nextInt(3)+1;
@@ -68,9 +68,9 @@ public class Character_Player extends Character{
 		if(this.statusPoint > 0) {
 			switch(i) {
 			case 0:
-				this.setMaxHp( this.getMaxHp() + 5 );
+				this.setMaxHp( this.getMaxHp() + 3 );
 				this.setStatusPoint(this.getStatusPoint() - 1);
-				FieldLogPanel.addTextArr("最大体力が 5 上がった！");
+				FieldLogPanel.addTextArr("最大体力が 6 上がった！");
 				break;
 			case 1:
 				this.setAttack( this.getAttack() + 2 );
@@ -109,7 +109,8 @@ public class Character_Player extends Character{
 	
 	//  ダメージ計算
 	protected int calculateDamage(Character target, double magnification) {
-		//  計算式... ( ( ( 乱数( 攻撃力 + 武器攻撃力 ) + ( 攻撃力 + 武器攻撃力 ) / 2 ) - ( 防御力 / 5 ) ) * 倍率
+		//  計算式... ( ( ( 乱数( 攻撃力 + 武器攻撃力 ) + ( 攻撃力 + 武器攻撃力 ) / 2 ) - ( 防御力 / 4 ) ) * 倍率
+		System.out.println("倍率:"+magnification);
 		int damage = (int) ( ( ( ( new java.util.Random().nextInt( (int)( this.getAttack() + Items.getItemEffect ( this.equippedWeapon ) ) ) * 0.1 ) + ( this.getAttack() + Items.getItemEffect ( this.equippedWeapon ) ) * 0.5 ) - ( target.getDefence() * 0.2 ) ) * magnification );
 		if(damage > 0) {
 			return damage;

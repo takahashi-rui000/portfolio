@@ -12,6 +12,7 @@ public class SaveAndLoad {
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
 			objectMapper.writeValue(new File("savedata.json"), savedata);
+			System.out.println("セーブしました");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -30,7 +31,7 @@ public class SaveAndLoad {
 			FieldSystem.setCurrentLocation_Y(loadedSavedata.getCurrentLocation_Y());
 			FieldMassPanel.repaintPlayer();
 		} catch (IOException e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	

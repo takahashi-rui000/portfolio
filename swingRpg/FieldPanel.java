@@ -47,7 +47,6 @@ public class FieldPanel extends JPanel implements ActionListener{
 		this.setComponentZOrder(fieldMassPanel, this.getComponentCount()-1);
 	}
 	
-	//  プレイヤーの位置変更
 	public static void setPlayer(int x, int y) {
 		if(!FieldSystem.isObstacle(FieldSystem.getCurrentLocation_X() + x, FieldSystem.getCurrentLocation_Y() + y)) {
 			FieldSystem.setCurrentLocation_X(FieldSystem.getCurrentLocation_X() + x);
@@ -69,7 +68,7 @@ public class FieldPanel extends JPanel implements ActionListener{
 	}
 	
 	//  ステータス表示 / 非表示
-	public void showStatus() {
+	public void statusDisplay() {
 		System.out.println("display");
 		this.add(fieldStatusSelectPanel);
 		this.setComponentZOrder(fieldStatusSelectPanel, 0);
@@ -77,7 +76,7 @@ public class FieldPanel extends JPanel implements ActionListener{
 		fieldStatusSelectPanel.switchDisplay();
 		this.repaint();
 	}
-	public void hideStatus() {
+	public void statusHiden() {
 		this.remove(fieldStatusSelectPanel);
 		fieldMassPanel.requestFocus();
 		this.repaint();
@@ -100,6 +99,7 @@ public class FieldPanel extends JPanel implements ActionListener{
 	public static FieldMassPanel getFieldMassPanel() {
 		return fieldMassPanel;
 	}
+
 	public static FieldLogPanel getFieldLogPanel() {
 		return fieldLogPanel;
 	}

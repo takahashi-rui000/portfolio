@@ -38,9 +38,6 @@ public class FieldStatusPanel extends JPanel implements ActionListener{
 			this.add(statusLabel[i]);
 		}
 		statusLabel[0].setBounds(10, 10, 300, 23);
-		statusLabel[5].setBounds(10, 185, 230, 23);
-		statusLabel[6].setBounds(10, 220, 230, 23);
-		statusLabel[7].setBounds(10, 255, 230, 23);
 	}
 	
 	private void prepareStatusUpButton() {

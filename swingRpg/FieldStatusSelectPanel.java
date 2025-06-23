@@ -36,7 +36,6 @@ public class FieldStatusSelectPanel extends JPanel implements KeyListener{
 		this.add(fieldStatusPanel);
 	}
 	
-	//  主題準備
 	private void prepareSubjectlabel() {
 		String[] subject = {"ステータス", "アイテム", "装備", "セーブ", "閉じる"};
 		subjectLabel = new JLabel[subject.length];
@@ -125,13 +124,13 @@ public class FieldStatusSelectPanel extends JPanel implements KeyListener{
 			fieldEquipmentPanel.requestFocus();
 			break;
 		case 3:
-			FieldLogPanel.addTextArr("セーブしました");
+			FieldLogPanel.addTextArr("セーブしました(未実装)");
 			SaveAndLoad.dataSave();
 			break;
 		case 4:
 			selectedNum = 0;
 			setSelectedLabel();
-			MainWindow.getFieldPanel().hideStatus();
+			MainWindow.getFieldPanel().statusHiden();
 		}
 	}
 	
@@ -148,7 +147,7 @@ public class FieldStatusSelectPanel extends JPanel implements KeyListener{
 		}else if(e.getKeyCode() == 27) {
 			selectedNum = 0;
 			setSelectedLabel();
-			MainWindow.getFieldPanel().hideStatus();
+			MainWindow.getFieldPanel().statusHiden();
 		}else if(e.getKeyCode() == 10) {
 			this.enterPressed();
 		}

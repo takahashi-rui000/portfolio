@@ -53,7 +53,7 @@ public class BattleSkillCheckPanel extends JPanel implements KeyListener, Action
 		runNum = 0;
 	}
 	
-	private void enterPressed(KeyEvent e) {
+	private void pressedEnter(KeyEvent e) {
 		if(runNum > -1) {
 			timer.stop();
 			this.setComponentZOrder(runLabel, 0);
@@ -144,6 +144,7 @@ public class BattleSkillCheckPanel extends JPanel implements KeyListener, Action
 				timer.stop();
 			}
 		}
+//		System.out.println(timer.getDelay());
 	}
 	
 	@Override
@@ -155,7 +156,8 @@ public class BattleSkillCheckPanel extends JPanel implements KeyListener, Action
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == 10) {
-			this.enterPressed(e);
+			this.pressedEnter(e);
+			System.out.println(runNum);
 		}
 	}
 	

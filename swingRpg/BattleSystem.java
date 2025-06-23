@@ -106,20 +106,17 @@ public class BattleSystem {
 	
 	private static void bossFlagManagement(Character_Enemy boss) {
 		if(boss instanceof Character_Enemy_Boss_Slime) {
-			FieldSystem.setBossFlag(true, 0);
+			FieldSystem.setBossFlag(0, true);
 		}else if(boss instanceof Character_Enemy_Boss_Goblin) {
-			FieldSystem.setBossFlag(true, 1);
+			FieldSystem.setBossFlag(1, true);
 		}else if(boss instanceof Character_Enemy_Boss_Seiryu) {
-			FieldSystem.setBossFlag(true, 2);
+			FieldSystem.setBossFlag(2, true);
 		}else if(boss instanceof Character_Enemy_Boss_Genbu) {
-			FieldSystem.setBossFlag(true, 3);
+			FieldSystem.setBossFlag(3, true);
 		}else if(boss instanceof Character_Enemy_Boss_Byakko) {
-			FieldSystem.setBossFlag(true, 4);
+			FieldSystem.setBossFlag(4, true);
 		}else if(boss instanceof Character_Enemy_Boss_Suzaku) {
-			FieldSystem.setBossFlag(true, 5);
-		}else if(boss instanceof Character_Enemy_Boss_Mao) {
-			FieldSystem.setBossFlag(true, 6);
-			FieldSystem.gameClear();
+			FieldSystem.setBossFlag(5, true);
 		}
 		FieldSystem.adaptField(FieldSystem.getCurrentFieldIndex());
 	}
@@ -225,6 +222,7 @@ public class BattleSystem {
 	public static Character[] getEnemys() {
 		return enemys;
 	}
+		
 	//  セッター
 	public static void setPlayer(Character_Player player) {
 		BattleSystem.player = player;
