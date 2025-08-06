@@ -11,17 +11,18 @@
         <h1>ポートフォリオ</h1>
         <p>札幌情報未来専門学校 / 氏名：高橋琉偉</p>
     </header>
-  
+
     <nav>
         <a href="#swing">RPG風ゲーム</a>
         <a href="#typing">タイピングゲーム</a>
         <a href="#jsp">ユーザー管理システム</a>
+        <a href="#php">フォトアルバム</a>
     </nav>
     
     <!-- 自己紹介 -->
     <section>
       <h2>自己紹介</h2>
-      <p>札幌情報未来専門学校ITシステムエンジニア学科3年の高橋琉偉です。</p>
+      <p>札幌情報未来専門学校ITシステムエンジニア学科3年の高橋琉偉と申します。</p>
       <p>このページでは、私が制作した作品を掲載しています。</p>
       <p>各作品の概要や使用した技術、工夫した点などをご覧いただけます。</p>
     </section>
@@ -79,6 +80,22 @@
         <p><strong>Git Hub：</strong><a href="https://github.com/takahashi-rui000/portfolio/tree/main/JSP-Servlet" target="_blank">GitHubでソースコードを見る</a></p>
         <div id="slider_user" class="slider"></div>
     </section>
+
+    
+    <!-- PHP -->
+    <section id="php">
+        <h2>フォトアルバム（PHP）</h2>
+        <p>専門学校の課題として作成した、基本的なユーザー管理機能・画像や文章の投稿を行えるWebアプリケーションです。</p>
+        <p>ユーザー登録、ログイン認証、ログアウトのほか、画像や文章の投稿、ログインユーザーによる投稿の削除、投稿へのリアクションが可能です。</p>
+        <p>データベースにはPostgreSQLを使用しています。</p>
+        <p>JSP/Servletでは未対応だった画像投稿も、本課題で実装しました。</p>
+        <p>画像のアップロード機能では、ファイル形式やサイズのチェックを行い、不正なファイルが保存されないよう安全面にも配慮しました。また、アップロードされた画像のファイル名はリネームして保存し、パスのみをデータベースに登録しています。</p>
+        <p>さらに、SQLインジェクションやXSS攻撃に対する対策も行い、セキュリティ面を意識して開発しました。</p>
+        <br>
+        <p><strong>使用技術：</strong>PHP, postgreSQL</p>
+        <p><strong>Git Hub：</strong><a href="https://github.com/takahashi-rui000/portfolio/tree/main/PHP" target="_blank">GitHubでソースコードを見る</a></p>
+        <div id="slider_php" class="slider"></div>
+    </section>
     
     <!-- おわりに -->
     <section>
@@ -89,6 +106,13 @@
     </section>
     <footer>
     </footer>
-    <script src="script.js"></script>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close"></span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+    <script src="slider.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>
