@@ -18,7 +18,6 @@ sliderData = [
             {type:"img", path: "images/rpg/command.gif", desc: "デバッグ用にコマンドを使用できるようにしました。マップの切り替えやステータスの増強、ゴールドの追加などを行えます。"},
             {type:"img", path: "images/rpg/bj.png", desc: "ブラックジャックを遊べるようにしました。ゲーム内のゴールドを賭けて遊ぶことができます。"},
             {type:"img", path: "images/rpg/bj_win.png", desc: "ブラックジャックの勝利画面です。"},
-            {type:"video", path: "images/rpg/video.mp4", desc: "プレイの流れを一通り収めた動画です。"}
         ]
     },
     {
